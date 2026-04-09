@@ -1,4 +1,5 @@
 name: 04 Generate Report Workflow
+run-name: ${{ github.actor }}의 리포트-생성
 
 on:
   push:
@@ -19,7 +20,7 @@ jobs:
           python-version: "3.11"
 
       - name: 리포트 파일 생성
-        run: python generate_report.py
+        run: python generated_report.py
 
       - name: 생성 결과 확인
         run: cat report.txt
