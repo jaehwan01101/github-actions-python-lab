@@ -17,6 +17,7 @@ jobs:
         run: |
           echo "${{ secrets.EC2_KEY }}" > private_key.pem
           chmod 400 private_key.pem
+          pwd
 
       - name: EC2 접속 테스트
         run: |
