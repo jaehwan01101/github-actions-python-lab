@@ -19,7 +19,7 @@ jobs:
           python-version: "3.11"
 
       - name: 리포트 생성
-        run: python generate_report.py
+        run: python generated_report.py
 
       - name: 리포트 파일 업로드
         uses: actions/upload-artifact@v4
