@@ -3,7 +3,7 @@ run-name: ${{ github.actor }}의 아티팩트-업로드
 on:
   push:
     branches:
-      - main
+      - '!main'
 
 jobs:
   upload-artifact:
