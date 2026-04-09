@@ -1,4 +1,5 @@
 name: 03 Python Test Workflow
+run-name: ${{ github.actor }}의 파이썬-테스트
 
 on:
   push:

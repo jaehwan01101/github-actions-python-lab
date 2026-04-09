@@ -1,0 +1,25 @@
+name: 04 Generate Report Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate-report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 저장소 코드 가져오기
+        uses: actions/checkout@v4
+
+      - name: Python 설치
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 리포트 파일 생성
+        run: python generate_report.py
+
+      - name: 생성 결과 확인
+        run: cat report.txt

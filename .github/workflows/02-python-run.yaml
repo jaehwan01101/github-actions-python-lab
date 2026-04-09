@@ -1,5 +1,5 @@
 name: 02 Python Workflow
-run-name: ${{ github.actor }}의 파이썬 테스트
+run-name: ${{ github.actor }}의 파이썬-런
 
 on:
   push:
