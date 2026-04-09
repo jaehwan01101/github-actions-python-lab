@@ -1,0 +1,23 @@
+name: 02 Python Workflow
+
+on:
+  push:
+    branches: 
+      - 'main'
+
+jobs:
+  run-python:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 저장소 코드 가져오기
+        uses: actions/checkout@v4
+      - name: Python 설치
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Python 버전 확인
+        run: python --version
+      - name: Python 스크립트 실행
+        run: python app.py
+      - name: 파일 목록 확인
+        run: ls -la
