@@ -18,6 +18,6 @@ jobs:
       - name: Python 버전 확인
         run: python --version
       - name: Python 스크립트 실행
-        run: python app.py
+        run: python .github/workflows/app.py
       - name: 파일 목록 확인
         run: ls -la
