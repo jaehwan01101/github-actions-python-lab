@@ -28,4 +28,4 @@ jobs:
         run: pip install -r .github/workflows/requirements.txt
 
       - name: 테스트 실행
-        run: pytest
+        run: pytest .github/workflows/test_calc.py
