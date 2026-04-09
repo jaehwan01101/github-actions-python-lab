@@ -4,10 +4,10 @@ run-name: ${{ github.actor }}의 파이썬-테스트
 on:
   push:
     branches:
-      - main
+      - '!main'
   pull_request:
     branches:
-      - main
+      - '!main'
 
 jobs:
   test:
