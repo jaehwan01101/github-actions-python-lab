@@ -1,0 +1,23 @@
+name: 06 Branch Workflow
+run-name: ${{ github.actor }}의 브랜치-체크
+on:
+  push:
+    branches:
+      - 'main'
+      - 'dev'
+
+jobs:
+  branch-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 브랜치 이름 출력
+        run: echo "Current branch is ${{ github.ref_name }}"
+
+      - name: main 브랜치일 때만 실행
+        if: github.ref_name == 'main'
+        run: echo "This is main branch"
+
+      - name: dev 브랜치일 때만 실행
+        if: github.ref_name == 'dev'
+        run: echo "This is dev branch"
